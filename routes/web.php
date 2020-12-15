@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/map', function () {
+    return view('map');
 });
+
+Route::view('/companies', 'companies');
+Route::view('/employees', 'employees');
+
+Route::get('company', 'CompanyController@create')->name('company.create');
+Route::post('company', 'CompanyController@store')->name('company.store');
+
+Route::get('employee', 'EmployeeController@create')->name('employee.create');
+Route::post('employee', 'EmployeeController@store')->name('employee.store');
+
