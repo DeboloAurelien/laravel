@@ -1,6 +1,9 @@
 <?php
 use App\Models\Company;
+use App\Models\Employee;
+
 $allCompanies = Company::all();
+$allEmployees = Employee::all();
 ?>
 
 
@@ -26,10 +29,6 @@ $allCompanies = Company::all();
 {{--        </div> <!-- end container -->--}}
 {{--    </body>--}}
 </html>
-
-
-
-
 
 <!doctype html>
 <html lang="en">
@@ -88,13 +87,12 @@ $allCompanies = Company::all();
         </div> <!-- end container -->
 
         <script>
-
-
-
-
             function initMap() {
                 // pass PHP variable declared above to JavaScript variable
                 const allCompanies = <?php echo json_encode($allCompanies) ?>;
+                const allEmployees = <?php echo json_encode($allEmployees) ?>;
+
+                console.log(allEmployees);
 
                 const lille = { lat: 50.6333, lng: 3.0667 };
                 /*const lomme = { lat: 50.65, lng: 2.9833 };
@@ -127,14 +125,11 @@ $allCompanies = Company::all();
                             infoWindow.open(map, marker);
                         });
                     }
-
-
-
                 }
             }
         </script>
         <script defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnr5hzJzbzw0yv_0y0nWLCYYNCrGeZPRQ&callback=initMap">
+                src="https://maps.googleapis.com/maps/api/js?key=<?php echo $_ENV['GOOGLE_MAPS_KEY']; ?>&callback=initMap">
         </script>
     </body>
 </html>
