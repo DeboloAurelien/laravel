@@ -11,14 +11,15 @@ $allCompanies = Company::all();
         <link href="../css/app.css" rel="stylesheet">
     </head>
     <body>
+        @include('header')
         <div class="container">
 
-            @include('header')
-            <div class="row text-center">
+            <div class="row">
                 <div class="col-12">
-                    <p><span class="text-success"><?php ($allCompanies); ?></span> Entreprises trouvées.</p>
+                    <h1>Liste des entreprises :</h1>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-12">
                     <table class="table border border-dark">
@@ -30,21 +31,30 @@ $allCompanies = Company::all();
                             <th scope="col">Téléphone</th>
                             <th scope="col">Latitude</th>
                             <th scope="col">Longitude</th>
+                            <th scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php
-                        foreach ($allCompanies as $company) {
-                            echo '<tr class="border border-dark">';
-                            echo '<th scope="row">'.$company->id.'</th>';
-                            echo '<td>'.$company->name.'</td>';
-                            echo '<td>'.$company->address.'</td>';
-                            echo '<td>'.$company->phone.'</td>';
-                            echo '<td>'.$company->latitude.'</td>';
-                            echo '<td>'.$company->longitude.'</td>';
-                            echo '</tr>';
-                        }
-                        ?>
+                        @foreach ($allCompanies as $company)
+
+                            <tr class="border border-dark">
+                                <th scope="row"><?php echo $company->id ?></th>
+                                <td><?php echo $company->name ?></td>
+                                <td><?php echo $company->address ?></td>
+                                <td><?php echo $company->phone ?></td>
+                                <td><?php echo $company->latitude ?></td>
+                                <td><?php echo $company->longitude ?></td>
+                                <td>
+                                    <a class="btn border-0" href="{{ url('/updateCompany') }}?id=<?php echo $company->id ?>">
+                                        @include("penImg")
+                                    </a>
+                                    <a class="btn border-0" href="{{ url('/removeCompany') }}?id=<?php echo $company->id ?>">
+                                        @include("trashImg")
+                                    </a>
+                                </td>
+                            </tr>
+
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

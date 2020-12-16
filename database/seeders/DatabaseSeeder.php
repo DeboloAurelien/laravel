@@ -16,24 +16,24 @@ class DatabaseSeeder extends Seeder
     {
         DB::table('company')->insert([
             'name' => 'Google',
-            'address' => '50 rue de la Liberté 59000 Lille',
+            'address' => '15 Rue de Rocroy 59800 Lille',
             'phone' => '03 00 00 00 00',
-            'latitude' => 50.6333,
-            'longitude' => 3.0667
+            'latitude' => 50.629871,
+            'longitude' => 3.069959
         ]);
         DB::table('company')->insert([
             'name' => 'Charlie-Solutions',
-            'address' => '120 avenue nationale 75000 Paris',
+            'address' => '66 Avenue du Président Paul Doumer, 59130 Lambersart',
             'phone' => '06 00 00 00 00',
-            'latitude' => 50.65,
-            'longitude' => 2.9833
+            'latitude' => 50.649822,
+            'longitude' => 3.030338
         ]);
         DB::table('company')->insert([
-            'name' => 'Amazon',
-            'address' => '1 impasse de l\'Arche 59800 Lille',
+            'name' => 'Ikea',
+            'address' => '130 Rue du Grand But Lomme, 59160 Lille',
             'phone' => '09 00 00 00 00',
-            'latitude' => 50.65,
-            'longitude' => 3.0333
+            'latitude' => 50.649973,
+            'longitude' => 2.979045
         ]);
 
 

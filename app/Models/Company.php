@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Company extends Model
 {
@@ -19,4 +20,11 @@ class Company extends Model
         'latitude',
         'longitude',
     ];
+
+    public static function all($columns = ['*'])
+    {
+        return static::query()->get(
+            is_array($columns) ? $columns : func_get_args()
+        );
+    }
 }

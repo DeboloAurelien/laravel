@@ -1,18 +1,24 @@
 <?php
 use App\Models\Employee;
+$allEmployees = Employee::all();
 
 ?>
 
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Entreprises</title>
+        <title>Employés</title>
         <link href="../css/app.css" rel="stylesheet">
     </head>
     <body>
+        @include('header')
         <div class="container">
 
-            @include('header')
+            <div class="row">
+                <div class="col-12">
+                    <h1>Liste des employés :</h1>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-12">
@@ -25,28 +31,36 @@ use App\Models\Employee;
                             <th scope="col">Adresse</th>
                             <th scope="col">Téléphone</th>
                             <th scope="col">Id Entreprise</th>
+                            <th scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php
-                        foreach (Employee::all() as $employee) {
-                            echo '<tr class="border border-dark">';
-                            echo '<th scope="row">'.$employee->id.'</th>';
-                            echo '<td>'.$employee->name.'</td>';
-                            echo '<td>'.$employee->firstname.'</td>';
-                            echo '<td>'.$employee->address.'</td>';
-                            echo '<td>'.$employee->phone.'</td>';
-                            echo '<td>'.$employee->idCompany.'</td>';
-                            echo '</tr>';
-                        }
-                        ?>
+
+                        @foreach ($allEmployees as $employee)
+
+                        <tr class="border border-dark">
+                            <th scope="row"><?php echo $employee->id ?></th>
+                            <td><?php echo $employee->name ?></td>
+                            <td><?php echo $employee->firstname ?></td>
+                            <td><?php echo $employee->address ?></td>
+                            <td><?php echo $employee->phone ?></td>
+                            <td><?php echo $employee->idCompany ?></td>
+                            <td>
+                                <a class="btn border-0" href="{{ url('/updateEmployee') }}?id=<?php echo $employee->id ?>">
+                                    @include("penImg")
+                                </a>
+                                <a class="btn border-0" href="{{ url('/removeEmployee') }}?id=<?php echo $employee->id ?>">
+                                    @include("trashImg")
+                                </a>
+                            </td>
+                        </tr>
+
+                        @endforeach
+
                         </tbody>
                     </table>
                 </div>
             </div>
-
-
-
 
         </div> <!-- end container -->
 

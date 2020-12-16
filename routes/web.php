@@ -37,6 +37,12 @@ Route::get('/map', function () {
 Route::view('/companies', 'companies');
 Route::view('/employees', 'employees');
 
+Route::view('/removeCompany', 'removeCompany');
+Route::view('/removeEmployee', 'removeEmployee');
+
+Route::view('/updateCompany', 'updateCompany');
+Route::view('/updateEmployee', 'updateEmployee');
+
 Route::get('company', 'CompanyController@create')->name('company.create');
 Route::post('company', 'CompanyController@store')->name('company.store');
 
