@@ -13,6 +13,9 @@
 J'ai trouvé cela très enrichissant de réaliser ce projet tout en me documentant sur le framework Laravel.
 Le fait d'utiliser des données depuis une base de données dans une Maps était très intéressant.
 
+Malheureusement je n'ai pas eu assez de temps pour réaliser entièrement le cahier des charges.
+Il manque l'ajout et la modification des tables Entreprise et Employé
+
 Temps estimé de la réalisation : 14 heures.
 
 <h1>Instructions d'installation</h1>
@@ -20,21 +23,28 @@ Temps estimé de la réalisation : 14 heures.
 
 ### Prérequis
 
-- Avoir composer sur la machine
-- Télécharger le dossier contenant ce projet
+- Avoir Wampserver, ou similaire, sur la machine pour la base de données
+- Télécharger le projet avec des commandes git
 - Avoir une clé API [Google Maps API Key](https://developers.google.com/maps/gmp-get-started)
 
 ## Installation
 
+### Git
+
+Une fois le projet téléchargé, se rendre sur la branche <code>master</code>
+
+<code>git checkout master</code>
+
 ### Depuis un terminal
 
-Se rendre dans le dossier <code>../testCharlieSolutions/laravel</code> du projet.
+Se rendre dans le dossier <code>../laravel</code> du projet.
 
 Allumer le serveur et laisser cette invite de commande ouverte pour avoir accès à l'application web :
 
 <code>php artisan serve</code>
 
-L'application web s'ouvre dans votre navigateur. Des variables et des données sont à ajouter.
+L'application web s'ouvre dans votre navigateur ([127.0.0.1:8000](http://127.0.0.1:8000/)) avec une map non fonctionnelle.
+Des variables et des données sont à ajouter pour corriger cela.
 
 ### Dans une seconde invite de commande
 
@@ -47,8 +57,6 @@ Où <code>db_deboloaurelien</code> est le nom de la base de données.
 Installation des tables de la base de données :
 
 <code>php artisan migrate:install</code>
-
-Rafraichir les tables :
 
 <code>php artisan migrate:fresh</code>
 

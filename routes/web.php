@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('map');
+});
+
 Route::get('/map', function () {
     $config = array();
     $config['center'] = 'Air Canada Centre, Toronto';
