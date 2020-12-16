@@ -7,15 +7,26 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/map') }}">Home</a>
+                <a class="nav-link" href="{{ url('/map') }}">Carte</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Data
+                <a class="nav-link dropdown-toggle" href="{{ url('/companies') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Entreprises
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ url('/companies') }}">Entreprises</a>
-                    <a class="dropdown-item" href="{{ url('/employees') }}">Employés</a>
+                    <a class="dropdown-item" href="{{ url('/companies') }}">Ajouter</a>
+                    <a class="dropdown-item" href="{{ url('/employees') }}">Modifier</a>
+                    <a class="dropdown-item" href="{{ url('/employees') }}">Supprimer</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{{ url('/employees') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Employés
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url('/companies') }}">Ajouter</a>
+                    <a class="dropdown-item" href="{{ url('/employees') }}">Modifier</a>
+                    <a class="dropdown-item" href="{{ url('/employees') }}">Supprimer</a>
                 </div>
             </li>
         </ul>

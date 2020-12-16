@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '5ab96b08a8d377f7641920bb98209923c0507e23',
+    'reference' => '4b86d5bab6d4abddd45d4deb2cc21ea24ce64ed8',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -87,6 +87,15 @@
       array (
       ),
       'reference' => '7a8c6e56ab3ffcc538d05e8155bb42269abf1a0c',
+    ),
+    'drehimself/laravelgooglemaps' => 
+    array (
+      'pretty_version' => 'v2.6',
+      'version' => '2.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '60c7b9dc22eab3f4cfc81420fb63c298fbe45f76',
     ),
     'egulias/email-validator' => 
     array (
@@ -445,7 +454,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '5ab96b08a8d377f7641920bb98209923c0507e23',
+      'reference' => '4b86d5bab6d4abddd45d4deb2cc21ea24ce64ed8',
     ),
     'laravel/sail' => 
     array (

@@ -18,23 +18,25 @@ class DatabaseSeeder extends Seeder
             'name' => 'Google',
             'address' => '50 rue de la Liberté 59000 Lille',
             'phone' => '03 00 00 00 00',
-            'latitude' => 5.5,
-            'longitude' => 10
+            'latitude' => 50.6333,
+            'longitude' => 3.0667
         ]);
         DB::table('company')->insert([
-        'name' => 'Charlie-Solutions',
-        'address' => '120 avenue nationale 75000 Paris',
-        'phone' => '06 00 00 00 00',
-        'latitude' => 0,
-        'longitude' => 4
+            'name' => 'Charlie-Solutions',
+            'address' => '120 avenue nationale 75000 Paris',
+            'phone' => '06 00 00 00 00',
+            'latitude' => 50.65,
+            'longitude' => 2.9833
         ]);
         DB::table('company')->insert([
             'name' => 'Amazon',
             'address' => '1 impasse de l\'Arche 59800 Lille',
             'phone' => '09 00 00 00 00',
-            'latitude' => 1,
-            'longitude' => 14
+            'latitude' => 50.65,
+            'longitude' => 3.0333
         ]);
+
+
         DB::table('employee')->insert([
             'name' => 'Dupont',
             'firstname' => 'Michel',
@@ -55,6 +57,13 @@ class DatabaseSeeder extends Seeder
             'address' => '455 rue de Paris 59000 Lille',
             'phone' => '08 00 00 00 00',
             'idCompany' => 1
+        ]);
+
+
+        DB::table('gmaps_geocache')->insert([
+            'address' => 'Air Canada Centre, Toronto',
+            'latitude' => '43.6434661',
+            'longitude' => '-79.3790989'
         ]);
     }
 }

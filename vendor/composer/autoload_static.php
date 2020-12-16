@@ -146,6 +146,7 @@ class ComposerStaticInit39efa82225fcd9a3ad36b93ff2aac8d4
         array (
             'Fruitcake\\Cors\\' => 15,
             'Fideloper\\Proxy\\' => 16,
+            'FarhanWazir\\GoogleMaps\\' => 23,
             'Faker\\' => 6,
             'Facade\\Ignition\\' => 16,
             'Facade\\IgnitionContracts\\' => 25,
@@ -436,6 +437,10 @@ class ComposerStaticInit39efa82225fcd9a3ad36b93ff2aac8d4
         'Fideloper\\Proxy\\' => 
         array (
             0 => __DIR__ . '/..' . '/fideloper/proxy/src',
+        ),
+        'FarhanWazir\\GoogleMaps\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/drehimself/laravelgooglemaps/src/FarhanWazir/GoogleMaps',
         ),
         'Faker\\' => 
         array (
@@ -1406,6 +1411,10 @@ class ComposerStaticInit39efa82225fcd9a3ad36b93ff2aac8d4
         'Faker\\Provider\\zh_TW\\Text' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/zh_TW/Text.php',
         'Faker\\UniqueGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/UniqueGenerator.php',
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/ValidGenerator.php',
+        'FarhanWazir\\GoogleMaps\\Containers\\isInsidePolygon' => __DIR__ . '/..' . '/drehimself/laravelgooglemaps/src/FarhanWazir/GoogleMaps/Containers/isInsidePolygon.php',
+        'FarhanWazir\\GoogleMaps\\Facades\\GMapsFacade' => __DIR__ . '/..' . '/drehimself/laravelgooglemaps/src/FarhanWazir/GoogleMaps/Facades/GMapsFacade.php',
+        'FarhanWazir\\GoogleMaps\\GMaps' => __DIR__ . '/..' . '/drehimself/laravelgooglemaps/src/FarhanWazir/GoogleMaps/GMaps.php',
+        'FarhanWazir\\GoogleMaps\\GMapsServiceProvider' => __DIR__ . '/..' . '/drehimself/laravelgooglemaps/src/FarhanWazir/GoogleMaps/GMapsServiceProvider.php',
         'Fideloper\\Proxy\\TrustProxies' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustProxies.php',
         'Fideloper\\Proxy\\TrustedProxyServiceProvider' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustedProxyServiceProvider.php',
         'Fruitcake\\Cors\\CorsServiceProvider' => __DIR__ . '/..' . '/fruitcake/laravel-cors/src/CorsServiceProvider.php',

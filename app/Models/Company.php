@@ -11,4 +11,12 @@ class Company extends Model
     protected $primaryKey = 'id';
     public $incrementing = true;
     protected $connection = 'mysql';
+
+    protected $fillable = [
+        'name',
+        'address',
+        'phone',
+        'latitude',
+        'longitude',
+    ];
 }

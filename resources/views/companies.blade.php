@@ -1,5 +1,6 @@
 <?php
 use App\Models\Company;
+$allCompanies = Company::all();
 
 ?>
 
@@ -13,7 +14,11 @@ use App\Models\Company;
         <div class="container">
 
             @include('header')
-            
+            <div class="row text-center">
+                <div class="col-12">
+                    <p><span class="text-success"><?php ($allCompanies); ?></span> Entreprises trouvées.</p>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12">
                     <table class="table border border-dark">
@@ -29,7 +34,7 @@ use App\Models\Company;
                         </thead>
                         <tbody>
                         <?php
-                        foreach (Company::all() as $company) {
+                        foreach ($allCompanies as $company) {
                             echo '<tr class="border border-dark">';
                             echo '<th scope="row">'.$company->id.'</th>';
                             echo '<td>'.$company->name.'</td>';

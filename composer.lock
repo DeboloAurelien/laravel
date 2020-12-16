@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5973d94d516097caf982f4061f51b95",
+    "content-hash": "873034a87e1124855a3c6e4c960e0ead",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -390,6 +390,64 @@
                 }
             ],
             "time": "2020-11-24T19:55:57+00:00"
+        },
+        {
+            "name": "drehimself/laravelgooglemaps",
+            "version": "v2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drehimself/laravelgooglemaps.git",
+                "reference": "60c7b9dc22eab3f4cfc81420fb63c298fbe45f76"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drehimself/laravelgooglemaps/zipball/60c7b9dc22eab3f4cfc81420fb63c298fbe45f76",
+                "reference": "60c7b9dc22eab3f4cfc81420fb63c298fbe45f76",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.*|6.*|7.*|8.*",
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "FarhanWazir\\GoogleMaps\\GMapsServiceProvider"
+                    ],
+                    "aliases": {
+                        "GMaps": "FarhanWazir\\GoogleMaps\\Facades\\GMapsFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FarhanWazir\\GoogleMaps\\": "src/FarhanWazir/GoogleMaps/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Farhan Wazir",
+                    "email": "seejee1@gmail.com",
+                    "role": "Author"
+                }
+            ],
+            "description": "Laravel Google Map package for 5.x. You can use all google map features in laravel.",
+            "keywords": [
+                "gmap",
+                "google",
+                "googlemap",
+                "laravel",
+                "map"
+            ],
+            "support": {
+                "source": "https://github.com/drehimself/laravelgooglemaps/tree/v2.6"
+            },
+            "time": "2020-09-18T03:21:36+00:00"
         },
         {
             "name": "egulias/email-validator",
