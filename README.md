@@ -7,56 +7,59 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Mon ressenti
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+J'ai trouvé cela très enrichissant de réaliser ce projet tout en me documentant sur le framework Laravel.
+Le fait d'utiliser des données depuis une base de données dans une Maps était très intéressant.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Temps estimé de la réalisation : 14 heures.
 
-## Learning Laravel
+<h1>Instructions d'installation</h1>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Prérequis
 
-## Laravel Sponsors
+- Avoir composer sur la machine
+- Télécharger le dossier contenant ce projet
+- Avoir une clé API [Google Maps API Key](https://developers.google.com/maps/gmp-get-started)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Installation
 
-### Premium Partners
+### Depuis un terminal
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+Se rendre dans le dossier <code>../testCharlieSolutions/laravel</code> du projet.
 
-## Contributing
+Allumer le serveur et laisser cette invite de commande ouverte pour avoir accès à l'application web :
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<code>php artisan serve</code>
 
-## Code of Conduct
+L'application web s'ouvre dans votre navigateur. Des variables et des données sont à ajouter.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Dans une seconde invite de commande
 
-## Security Vulnerabilities
+Création de la base de données :
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<code>php artisan db:create db_deboloaurelien</code>
 
-## License
+Où <code>db_deboloaurelien</code> est le nom de la base de données.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Installation des tables de la base de données :
+
+<code>php artisan migrate:install</code>
+
+Rafraichir les tables :
+
+<code>php artisan migrate:fresh</code>
+
+Ajouter des données (ou population) aux tables :
+
+<code>php artisan db:seed</code>
+
+### Dans un éditeur de fichiers
+
+Dans le fichier <code>laravel/.env</code>, changer la valeur de <code>GOOGLE_MAPS_KEY</code> par votre propre clé API.
+
+### Dans votre navigateur
+
+Rafraichir la page. Un menu et une maps s'affiche avec 3 markers (3 entreprises).
